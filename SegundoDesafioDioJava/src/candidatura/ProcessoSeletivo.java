@@ -11,7 +11,10 @@ public class ProcessoSeletivo {
         ProcessoSeletivo.analisarCandidato(2000.0);
         */
         
-        ProcessoSeletivo.selecionandoCandidato();
+        //ProcessoSeletivo.selecionandoCandidato();
+
+        imprimirSelecionados();
+
     }
 
     static void analisarCandidato(double salarioPretendido){
@@ -53,6 +56,27 @@ public class ProcessoSeletivo {
             System.out.println("Todos os candidatos foram processados.");
         }
     }
+
+    static void imprimirSelecionados(){
+        String[] candidatos = {"Felipe", "Kaua", "Fernando", "Marcelo", "Bianca"};
+
+
+        System.out.println("Imprimindo os candidatos com indice:\n");
+
+        for (int i = 0; i < candidatos.length; i++){
+            System.out.println("Candidato = "+candidatos[i]+ " index = "+i);
+
+
+        }
+
+        System.out.println("Imprimindo os candidatos sem se preocupar com o indice:\n");
+
+        for (String candidato:candidatos){
+            System.out.println(candidato);
+        }
+    }
+
+
 
     static double valorPretendido() {
         return ThreadLocalRandom.current().nextDouble(1800.0, 2200.0);
